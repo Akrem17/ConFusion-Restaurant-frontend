@@ -1,0 +1,44 @@
+<div fxLayout='row' fxLayoutGap='40px'  fxLayout.sm="column"
+fxLayout.xs="column">
+  <div fxFlex='20%'>
+    <h2>Featured Dish !!</h2>
+        <mat-card>
+            <mat-card-header>
+              
+              <mat-card-title>{{featuredDishe.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src={{featuredDishe.image}} alt={{featuredDishe.name}}>
+            <mat-card-content>
+              <p>
+                {{featuredDishe.description}}
+              </p>
+            </mat-card-content>
+            
+          </mat-card>  
+        </div>
+      
+<hr>
+  <div fxFlex>
+    <h2>Dishes on Promotions !</h2>
+      <mat-grid-list cols="4" rowHeight="1:2"  >
+          <mat-grid-tile *ngFor='let dish of dishesOnPromotion'  >
+              <mat-card class="cardedit"  >
+                  <mat-card-header>
+                    
+                    <mat-card-title>{{dish.name}}</mat-card-title>
+                  </mat-card-header>
+                  <img mat-card-image src={{dish.image}} alt={{dish.name}}>
+                  <div >
+                  <mat-card-content >
+                    <p >
+                    {{dish.description}} </p>
+                  </mat-card-content>
+                </div>
+                </mat-card>  
+          </mat-grid-tile>
+         
+        </mat-grid-list>
+        
+
+  </div>
+</div>
